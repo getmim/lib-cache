@@ -1,0 +1,2 @@
+etc/cache/lib-cache/*
+!etc/cache/lib-cache/.gitkeep
