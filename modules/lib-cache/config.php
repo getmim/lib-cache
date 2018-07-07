@@ -2,12 +2,12 @@
 /**
  * Lib Cache
  * @package lib-cache
- * @version 0.0.1
+ * @version 0.0.2
  */
 
 return [
     '__name' => 'lib-cache',
-    '__version' => '0.0.1',
+    '__version' => '0.0.2',
     '__git' => 'git@github.com:getphun/lib-cache.git',
     '__license' => 'MIT',
     '__author' => [
