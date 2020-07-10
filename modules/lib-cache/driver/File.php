@@ -17,9 +17,14 @@ class File implements \LibCache\Iface\Driver
         return $this->base . '/' . $name . '.php';
     }
 
-    public function __construct(string $base=null){
+    public function __construct(){
+        $base = \Mim::$app->config->libCache->file->base;
         if(!$base)
             $base = BASEPATH . '/etc/cache/lib-cache';
+
+        if(substr($base,0,1) !== '/')
+            $base = realpath( BASEPATH . '/' . $base );
+
         $this->base = $base;
     }
 

@@ -7,7 +7,7 @@
 
 return [
     '__name' => 'lib-cache',
-    '__version' => '0.0.2',
+    '__version' => '0.1.0',
     '__git' => 'git@github.com:getphun/lib-cache.git',
     '__license' => 'MIT',
     '__author' => [
@@ -46,6 +46,9 @@ return [
 
     'libCache' => [
         'driver' => 'file',
+        'file' => [
+            'base' => null
+        ],
         'handlers' => [
             'file' => 'LibCache\\Driver\\File'
         ]

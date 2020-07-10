@@ -15,6 +15,24 @@ Intalasi module ini akan menyediakan cache dengan driver file. Untuk
 dukungan cache driver redis, atau yang lainnya, silahkan instal module
 yang bersangkutan.
 
+## konfigurasi
+
+Untuk cache dengan method file, semua cache akan disimpan di folder 
+`BASEPATH/etc/cache/lib-cache`. Untuk memindahkan lokasi penyimpanan,
+tambahkan konfigurasi seperti di bawah pada aplikasi:
+
+```php
+return [
+    'libCache' => [
+        'file' => [
+            'base' => '/path/to/dir'
+        ]
+    ]
+];
+```
+
+Nilai `base` menerima absolute atau relative path.
+
 ## penggunaan
 
 Dari kontroler, atau middleware, atau service, service cache bisa digunakan
